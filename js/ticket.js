@@ -1,6 +1,6 @@
 function generateTicket() {                                            
-    let selectedSeance = JSON.parse(localStorage.selectedSeance);           
-
+    let selectedSeance = JSON.parse(localStorage.selectedSeance);  
+             
     let places = "";                                                                                                                       
     let price = 0;                                                          
     for (let salePlace of selectedSeance.salesPlaces) {                  

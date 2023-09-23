@@ -14,8 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		let dayLink = dayNumber[i].parentNode
 		dayLink.dataset.markTime = markTime;
 
-		   
-		if ((dayWeek[i].innerHTML == "Вс") || (dayWeek[i].innerHTML == "Сб")) {
+		   if ((dayWeek[i].innerHTML == "Вс") || (dayWeek[i].innerHTML == "Сб")) {
 			dayLink.classList.add("page-nav__day_weekend");
 		} else {
 			dayLink.classList.remove("page-nav__day_weekend");
@@ -28,8 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		subject.films = response.films.result;
 		subject.halls = response.halls.result;
 		subject.halls = subject.halls.filter(hall => hall.hall_open == 1);
-
-		let main = document.querySelector("main");
+        let main = document.querySelector("main");
 
 		subject.films.forEach((film) => {
 			let seancesHTML = "";
@@ -70,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </section>`
 			};
 		});
+		
 		let dayLinks = Array.from(document.querySelectorAll(".page-nav__day"));
 		let movieSeances = Array.from(document.querySelectorAll(".movie-seances__time"));
 		dayLinks.forEach(dayLink => dayLink.addEventListener('click', (event) => {
